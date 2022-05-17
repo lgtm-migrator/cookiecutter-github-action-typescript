@@ -1,7 +1,19 @@
 [[development-dependencies]]
 === 📌 Development Dependencies
-Development Dependencies are defined in
-TODO.
+The Primary Development Dependencies are defined in `package.json`.
+
+Additional Development Dependencies are defined in a
+https://pip.pypa.io/en/stable/user_guide/#requirements-files[pip requirements file]
+named `requirements-dev.txt`.
+Example Installation Instructions for Linux are shown below:
+
+----
+# "optional": create a python virtualenv and activate it for the current shell session
+$ python3 -m venv venv
+$ source venv/bin/activate
+
+$ python3 -m pip install -r requirements-dev.txt
+----
 
 
 [[cookiecutter]]
