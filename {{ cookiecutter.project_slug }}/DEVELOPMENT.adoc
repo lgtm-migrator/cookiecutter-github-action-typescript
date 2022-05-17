@@ -1,9 +1,14 @@
 [[development-dependencies]]
 === 📌 Development Dependencies
-The Primary Development Dependencies are defined in `package.json`.
+The Dependencies of this Project are defined in `package.json`.
+Install via:
 
-Additional Development Dependencies are defined in a
-https://pip.pypa.io/en/stable/user_guide/#requirements-files[pip requirements file]
+----
+$ npm install -D
+----
+
+The Dependencies of Additional Development Tools are defined in a
+https://pip.pypa.io/en/stable/user_guide/#requirements-files[python pip requirements file]
 named `requirements-dev.txt`.
 Example Installation Instructions for Linux are shown below:
 
@@ -70,6 +75,6 @@ Automatic Tests are run on each Contribution using GitHub Workflows.
 
 The System Requirements for local testing are as follows:
 
-* TODO with <<development-dependencies>> installed
+* NodeJS 16 with <<development-dependencies>> installed
 
-To run the tests, simply run `TODO` on the command line.
+To run the tests, simply run `npm run test` on the command line.
