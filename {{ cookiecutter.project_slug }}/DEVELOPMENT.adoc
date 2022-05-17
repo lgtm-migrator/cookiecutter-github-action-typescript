@@ -1,6 +1,6 @@
 [[development-dependencies]]
 === 📌 Development Dependencies
-Development Dependencies are defined in 
+Development Dependencies are defined in
 TODO.
 
 
