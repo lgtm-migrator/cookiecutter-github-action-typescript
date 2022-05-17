@@ -9,7 +9,7 @@ on:
       - master
   schedule:
     # At 01:30 AM, only on Sunday
-    - cron: '30 1 * * 0'
+    - cron: "30 1 * * 0"
 
 jobs:
   CodeQL-Build:
