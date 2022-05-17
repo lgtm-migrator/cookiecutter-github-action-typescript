@@ -9,7 +9,6 @@ permissions:
       - master
     paths:
       - ".github/workflows/gh-pages.yml"
-      - "meta/main.yml"
       - "CHANGELOG.adoc"
       - "CODE_OF_CONDUCT.md"
       - "CONTRIBUTING.adoc"
