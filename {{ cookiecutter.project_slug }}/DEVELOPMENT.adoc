@@ -32,7 +32,7 @@ $ python3 -m pip install -r requirements-dev.txt
 === 🧪 Testing
 Automatic Tests are run on each Contribution using GitHub Workflows.
 
-To run the tests, simply run `npm run test` on the command line.
+To run the tests, simply run `npm run build` followed by `npm run test` on the command line.
 
 
 [[packaging]]

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    /** Specifies module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es6' / 'es2015' or 'ESNext'.  */
+    "module": "commonjs",
+    /** Specifies ECMAScript target version: 'ES3' (default), 'ES5', 'ES6' / 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020' or 'ESNext'.
+        "ESNext" targets latest supported {@link https://github.com/tc39/proposals ES proposed features}. */
+    "target": "esnext",
+    "outDir": "./lib",
+    "rootDir": "./src",
+    /** Enables all strict type-checking options. */
+    "strict": true,
+    /** Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+    "esModuleInterop": true
+  },
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts"
+  ]
+}
