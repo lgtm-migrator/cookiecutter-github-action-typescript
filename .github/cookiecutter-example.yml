@@ -1,0 +1,8 @@
+default_context:
+  full_name: "Jonas Pammer"
+  email: "opensource@jonaspammer.at"
+  github_username: "JonasPammer"
+  code_of_conduct_enforcement_contact_email: "opensource@jonaspammer.at"
+
+  project_name: "Some Action"
+  project_short_description: "does something"

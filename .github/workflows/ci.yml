@@ -1,0 +1,76 @@
+name: CI
+permissions: read-all
+"on":
+  pull_request:
+  push:
+    branches:
+      - master
+    paths:
+      - ".github/workflows/ci.yml"
+      - ".github/cookiecutter-example.yml"
+      - "{{ cookiecutter.project_slug }}/**"
+      - "cookiecutter.json"
+      - "requirements-dev.txt"
+
+jobs:
+  test-build:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: check out the codebase
+        uses: actions/checkout@v3
+
+      - name: set up python 3
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.7"
+
+      - name: setup/activate pre-commit cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pre-commit
+          key: ${{ hashFiles('**/.pre-commit-config.yaml') }}
+
+      - name: setup/activate cookiecutter-venv cache
+        uses: actions/cache@v3
+        with:
+          path: cookiecutter-venv
+          key: ${{ hashFiles('requirements-dev.txt') }}
+
+      - name: install cookiecutter development dependencies
+        run: |
+          python3 -m venv cookiecutter-venv
+          source cookiecutter-venv/bin/activate
+          pip3 install -r requirements-dev.txt
+
+      - name: Generate example project from cookiecutter.
+        run: |
+          source cookiecutter-venv/bin/activate
+          cookiecutter . --config-file .github/cookiecutter-example.yml --no-input
+
+      - name: Run pre-commit on all files in generated project
+        run: |
+          git init
+          git add .
+          source cookiecutter-venv/bin/activate
+          pre-commit run --all-files --show-diff-on-failure
+        working-directory: ./some-action
+      
+      - name: install npm dependencies of generated project
+        run: npm install
+        working-directory: ./some-action
+
+      - name: Run all npm scripts of generated project
+        run: |
+          npm run all
+        working-directory: ./some-action
+  
+  # make sure the action works on a clean machine without building
+  test-self-action: 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+        with:
+          milliseconds: 1000
