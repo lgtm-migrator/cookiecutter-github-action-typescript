@@ -1,0 +1,28 @@
+{
+  "name": "{{ cookiecutter.project_slug }}",
+  "version": "0.0.1",
+  "description": "{{ cookiecutter.short_description }}",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonasPammer/cookiecutter-github-action-typescript.git"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "JavaScript",
+    "TypeScript"
+  ],
+  "author": "{{ cookiecutter.full_name }}",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JonasPammer/cookiecutter-github-action-typescript/issues"
+  },
+  "homepage": "https://github.com/JonasPammer/cookiecutter-github-action-typescript#readme",
+  "dependencies": {
+    "@actions/core": "^1.8.2"
+  },
+  "devDependencies": {
+  }
+}
