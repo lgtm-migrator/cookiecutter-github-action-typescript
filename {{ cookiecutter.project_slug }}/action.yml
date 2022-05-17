@@ -1,6 +1,6 @@
 name: '{{ cookiecutter.project_slug }}'
 description: '{{ cookiecutter.project_short_description }}'
-author: '{{ cookiecutter.name }}'
+author: '{{ cookiecutter.full_name }}'
 inputs:
   milliseconds: # just an example
     required: true
