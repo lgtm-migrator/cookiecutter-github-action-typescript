@@ -53,7 +53,7 @@ jobs:
         run: |
           git init
           git add .
-          source cookiecutter-venv/bin/activate
+          source ../cookiecutter-venv/bin/activate
           pre-commit run --all-files --show-diff-on-failure
         working-directory: ./some-action
 
@@ -65,12 +65,3 @@ jobs:
         run: |
           npm run all
         working-directory: ./some-action
-
-  # make sure the action works on a clean machine without building
-  test-self-action:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: ./
-        with:
-          milliseconds: 1000
