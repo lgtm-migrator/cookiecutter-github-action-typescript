@@ -1,3 +1,10 @@
+[[development-system-dependencies]]
+=== 📌 Development Machine Dependencies
+
+* NodeJS (LTS tested)
+* Python 3
+
+
 [[development-dependencies]]
 === 📌 Development Dependencies
 The Dependencies of this Project are defined in `package.json`.
@@ -26,6 +33,16 @@ $ python3 -m pip install -r requirements-dev.txt
 Automatic Tests are run on each Contribution using GitHub Workflows.
 
 To run the tests, simply run `npm run test` on the command line.
+
+
+[[packaging]]
+=== Packaging
+As defined in `action.yml`, the primary entry point for this action is `dist/index.js`.
+This bundled file needs to be *generated* by issuing `npm run build` followed by `npm run package`.
+
+[TIP]
+Packaging is run on each Contribution by a GitHub Workflow,
+which automagically commits the generated files back to the repository.
 
 
 [[pre-commit]]
