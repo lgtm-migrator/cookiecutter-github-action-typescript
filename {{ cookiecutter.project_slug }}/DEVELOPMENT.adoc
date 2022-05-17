@@ -21,22 +21,11 @@ $ python3 -m pip install -r requirements-dev.txt
 ----
 
 
-[[cookiecutter]]
-=== 🍪 CookieCutter
+[[testing]]
+=== 🧪 Testing
+Automatic Tests are run on each Contribution using GitHub Workflows.
 
-This Project shall be kept in sync with
-https://github.com/JonasPammer/cookiecutter-github-action-typescript[the CookieCutter it was originally templated from]
-using https://github.com/cruft/cruft[cruft] (if possible) or manual alteration (if needed)
-to the best extend possible.
-
-.Official Example Usage of `cruft update`
-____
-image::https://raw.githubusercontent.com/cruft/cruft/master/art/example_update.gif[Official Example Usage of `cruft update`]
-____
-
-=== 🕗 Changelog
-When a new tag is pushed, an appropriate GitHub Release will be created
-by the Repository Maintainer to provide a proper human change log with a title and description.
+To run the tests, simply run `npm run test` on the command line.
 
 
 [[pre-commit]]
@@ -69,12 +58,21 @@ You can also, for example, execute pre-commit's hooks at any time by running `pr
 ====
 
 
-[[testing]]
-=== 🧪 Testing
-Automatic Tests are run on each Contribution using GitHub Workflows.
+[[cookiecutter]]
+=== 🍪 CookieCutter
 
-The System Requirements for local testing are as follows:
+This Project shall be kept in sync with
+https://github.com/JonasPammer/cookiecutter-github-action-typescript[the CookieCutter it was originally templated from]
+using https://github.com/cruft/cruft[cruft] (if possible) or manual alteration (if needed)
+to the best extend possible.
 
-* NodeJS 16 with <<development-dependencies>> installed
+.Official Example Usage of `cruft update`
+____
+image::https://raw.githubusercontent.com/cruft/cruft/master/art/example_update.gif[Official Example Usage of `cruft update`]
+____
 
-To run the tests, simply run `npm run test` on the command line.
+
+[[changelog]]
+=== 🕗 Changelog
+When a new tag is pushed, an appropriate GitHub Release will be created
+by the Repository Maintainer to provide a proper human change log with a title and description.
