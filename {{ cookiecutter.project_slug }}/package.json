@@ -1,7 +1,7 @@
 {
   "name": "{{ cookiecutter.pkg_name }}",
   "version": "0.0.1",
-  "description": "{{ cookiecutter.short_description }}",
+  "description": "{{ cookiecutter.project_short_description }}",
   "scripts": {
   },
   "repository": {
