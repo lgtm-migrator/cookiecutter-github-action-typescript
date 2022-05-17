@@ -1,0 +1,29 @@
+---
+name: CI
+permissions: read-all
+"on":
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - master
+    paths:
+      - ".github/workflows/ci.yml"
+      - "tests/**"
+      - ".gitattributes"
+      - ".yamllint"
+      - "LICENSE"
+      - "{{ cookiecutter.pkg_name }}/**"
+  schedule:
+    # At 05:00 on Sunday.
+    - cron: "0 5 * * 0"
+
+jobs:
+  test-self-action:
+    name: Make sure the action works on a clean machine without building
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+        with:
+          milliseconds: 1000
