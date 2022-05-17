@@ -1,0 +1,11 @@
+name: '{{ cookiecutter.project_slug }}'
+description: '{{ cookiecutter.project_short_description }}'
+author: '{{ cookiecutter.name }}'
+inputs:
+  milliseconds: # just an example
+    required: true
+    description: 'input description here'
+    default: 'default value if applicable'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
