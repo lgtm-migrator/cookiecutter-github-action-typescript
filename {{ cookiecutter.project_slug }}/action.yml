@@ -7,5 +7,5 @@ inputs:
     description: "input description here"
     default: "default value if applicable"
 runs:
-  using: "node16" # installed by default on every GitHub Runner (https://github.com/actions/virtual-environments/)
+  using: "node16" # LTS version installed by default on every GitHub Runner (https://github.com/actions/virtual-environments/)
   main: "dist/index.js"
