@@ -35,7 +35,9 @@
 
     // Enabling typescript-eslint's "extension rules" not enabled by plugin's preset (and disabling their base ones):
     "no-invalid-this": "off",
-    "@typescript-eslint/no-invalid-this": ["error"]
+    "@typescript-eslint/no-invalid-this": ["error"],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"]
   },
   "overrides": [
     {
