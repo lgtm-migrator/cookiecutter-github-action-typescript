@@ -50,6 +50,17 @@ repos:
       - id: yamllint
         args: [-c=.yamllint]
 
+  ### JAVA(SCRIPT) ###
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v8.15.0
+    hooks:
+      - id: eslint
+        additional_dependencies:
+          - eslint@8.15.0
+          - eslint-plugin-jest@26.2.2
+          - eslint-plugin-github@4.3.6
+          - "@typescript-eslint/parser"
+          - "@typescript-eslint/eslint-plugin"
 
 default_language_version:
   python: python3
