@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "{{ cookiecutter.project_short_description }}",
   "scripts": {
+    "lint": "pre-commit run eslint --all-files",
     "build": "tsc",
     "test": "jest"
   },
