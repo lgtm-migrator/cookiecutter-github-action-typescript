@@ -15,8 +15,7 @@
   "extends": [
     "plugin:github/recommended",
     "plugin:github/typescript",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/strict"
   ],
   "rules": {
     "no-unused-vars": "off",
