@@ -32,6 +32,7 @@
         "@typescript-eslint/member-delimiter-style": ["error"],
         "@typescript-eslint/method-signature-style": ["error"],
         "@typescript-eslint/no-confusing-void-expression": ["error"],
+        "@typescript-eslint/prefer-readonly-parameter-types": ["error"]
       }
     }
   ]
