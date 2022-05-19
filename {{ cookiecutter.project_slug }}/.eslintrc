@@ -18,9 +18,13 @@
     "plugin:@typescript-eslint/strict"
   ],
   "rules": {
-    // Explicitly disabling eslint base rules
-    // that are being replaced/enhanced by typescript-eslint's "extension rules" included in the defined preset
-    // to avoid reporting of incorrect errors:
+    // Enabling typescript-eslint "extension rules" not enabled by plugin preset (and disabling their base ones):
+    "@typescript-eslint/no-invalid-this": ["error"],
+    "@typescript-eslint/no-use-before-define": ["error"],
+
+    // Explicitly disabling eslint's base rules (as they are replaced by typescript-eslint's "extension rules") to avoid reporting of incorrect errors:
+    "no-invalid-this": "off",
+    "no-use-before-define": "off",
     "brace-style": "off",
     "dot-notation": "off",
     "no-array-constructor": "off",
@@ -31,13 +35,7 @@
     "no-throw-literal": "off",
     "no-unused-vars": "off",
     "no-useless-constructor": "off",
-    "require-await": "off",
-
-    // Enabling typescript-eslint "extension rules" not enabled by plugin preset (and disabling their base ones):
-    "no-invalid-this": "off",
-    "@typescript-eslint/no-invalid-this": ["error"],
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": ["error"]
+    "require-await": "off"
   },
   "overrides": [
     {
