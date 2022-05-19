@@ -19,9 +19,35 @@ permissions: read-all
     - cron: "0 5 * * 0"
 
 jobs:
+  package:
+    name: Package Distribution File
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: check out the codebase
+        uses: actions/checkout@v2
+
+      - name: install npm dependencies
+        run: npm install
+
+      - name: Compile Typescript.
+        run: npm run build
+
+      - name: Compile source into single file.
+        run: npm run package
+
+      - name: Commit generated dist.
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore: generate packaged distribution file \n {% raw %}${{ github.event.head_commit.message }}{% endraw %}"
+          file_pattern: "dist/*"
+
+
   test-self-action:
     name: Make sure the action works on a clean machine without building
+    needs: package
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
       - uses: ./
