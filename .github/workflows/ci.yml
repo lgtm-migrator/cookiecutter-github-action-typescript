@@ -71,10 +71,11 @@ jobs:
         working-directory: ./some-action
 
       - name: install npm dependencies of generated project
-        run: npm install
+        run: npm install -D
         working-directory: ./some-action
 
       - name: Run all npm scripts of generated project
         run: |
+          source project-venv/bin/activate
           npm run all
         working-directory: ./some-action
