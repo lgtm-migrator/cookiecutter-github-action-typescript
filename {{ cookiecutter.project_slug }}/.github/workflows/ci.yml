@@ -39,7 +39,7 @@ jobs:
       - name: Commit generated dist.
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "chore: generate packaged distribution file \n {% raw %}${{ github.event.head_commit.message }}{% endraw %}"
+          commit_message: "chore: generate packaged distribution file for ${{ github.sha }} \n {% raw %}${{ github.event.head_commit.message }}{% endraw %}"
           file_pattern: "dist/*"
 
   test-self-action:
