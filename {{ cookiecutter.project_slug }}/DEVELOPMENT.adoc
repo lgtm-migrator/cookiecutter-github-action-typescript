@@ -41,8 +41,8 @@ As defined in `action.yml`, the primary entry point for this action is `dist/ind
 This bundled file needs to be *generated* by issuing `npm run build` followed by `npm run package`.
 
 [TIP]
-Packaging is run on each Contribution by a GitHub Workflow,
-which automagically commits the generated files back to the repository.
+Packaging is performed on each contribution by a GitHub workflow,
+which automatically commits the generated files back to the repository.
 
 
 [[pre-commit]]
