@@ -42,7 +42,6 @@ jobs:
           commit_message: "chore: generate packaged distribution file \n {% raw %}${{ github.event.head_commit.message }}{% endraw %}"
           file_pattern: "dist/*"
 
-
   test-self-action:
     name: Make sure the action works on a clean machine without building
     needs: package
