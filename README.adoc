@@ -14,6 +14,9 @@ ifdef::env-github[]
 endif::[]
 
 
+https://github.com/JonasPammer/cookiecutter-github-action-typescript/actions/workflows/ci.yml[image:https://github.com/JonasPammer/cookiecutter-github-action-typescript/actions/workflows/ci.yml/badge.svg[CI Status]]
+
+
 [subs="+quotes,attributes"]
 ----
 user@machine:~/dev$ *cruft create https://github.com/JonasPammer/cookiecutter-github-action-typescript.git*
