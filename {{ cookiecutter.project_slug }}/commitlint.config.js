@@ -1,3 +1,4 @@
+/* eslint-disable import/no-commonjs */
 module.exports = {
   extends: [
     "@commitlint/config-conventional", // https://gist.github.com/JonasPammer/4ea577854ae10afe644bff366d7b2a8a
