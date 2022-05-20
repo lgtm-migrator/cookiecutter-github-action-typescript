@@ -24,9 +24,9 @@ user@machine:~/dev$ *cruft create https://github.com/JonasPammer/cookiecutter-gi
 === At-a-Glance
 
 * Formatting with https://prettier.io/[prettier]
-* Static typing with https://www.typescriptlang.org/[typescript]
-* Linting with https://eslint.org/[eslint]
+* Extensive Linting with https://eslint.org/[eslint]
 * Git hooks that run all the above with pre-commit
+* Static typing with https://www.typescriptlang.org/[typescript]
 * Testing with https://jestjs.io/[jest]
 * Continuous Integration with https://github.com/features/actions[GitHub Actions]
 * As a JavaScript based Action, this action can be run by any Operating system (Linux, macOS, Windows).
