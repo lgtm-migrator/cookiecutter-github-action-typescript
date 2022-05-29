@@ -20,8 +20,6 @@ https://github.com/JonasPammer/{{cookiecutter-github-action-typescript}}/actions
 Awesome https://github.com/cookiecutter/cookiecutter[Cookiecutter] template for creating
 universal NodeJS-based GitHub Actions using TypeScript.
 
-toc::[]
-
 == Features
 
 * Formatting with https://prettier.io/[prettier]
