@@ -45,6 +45,26 @@ Packaging is performed on each contribution by a GitHub workflow,
 which automatically commits the generated files back to the repository.
 
 
+[[cookiecutter]]
+=== 🍪 CookieCutter
+
+This Project shall be kept in sync with
+https://github.com/JonasPammer/cookiecutter-github-action-typescript[the CookieCutter it was originally templated from]
+using https://github.com/cruft/cruft[cruft] (if possible) or manual alteration (if needed)
+to the best extend possible.
+
+.Official Example Usage of `cruft update`
+____
+image::https://raw.githubusercontent.com/cruft/cruft/master/art/example_update.gif[Official Example Usage of `cruft update`]
+____
+
+
+[[changelog]]
+=== 🕗 Changelog
+When a new tag is pushed, an appropriate GitHub Release will be created
+by the Repository Maintainer to provide a proper human change log with a title and description.
+
+
 [[pre-commit]]
 === ℹ️ General Linting and Styling Conventions
 General Linting and Styling Conventions are
@@ -73,23 +93,3 @@ aborting the commit themselves if a hook alarm'ed.
 
 You can also, for example, execute pre-commit's hooks at any time by running `pre-commit run --all-files`.
 ====
-
-
-[[cookiecutter]]
-=== 🍪 CookieCutter
-
-This Project shall be kept in sync with
-https://github.com/JonasPammer/cookiecutter-github-action-typescript[the CookieCutter it was originally templated from]
-using https://github.com/cruft/cruft[cruft] (if possible) or manual alteration (if needed)
-to the best extend possible.
-
-.Official Example Usage of `cruft update`
-____
-image::https://raw.githubusercontent.com/cruft/cruft/master/art/example_update.gif[Official Example Usage of `cruft update`]
-____
-
-
-[[changelog]]
-=== 🕗 Changelog
-When a new tag is pushed, an appropriate GitHub Release will be created
-by the Repository Maintainer to provide a proper human change log with a title and description.
