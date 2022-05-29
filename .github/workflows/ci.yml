@@ -18,6 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      ### GENERIC COOKIECUTTER INITIALIZATION STEPS ###
       - name: check out the codebase
         uses: actions/checkout@v3
 
@@ -70,6 +71,7 @@ jobs:
           pre-commit run --all-files --show-diff-on-failure
         working-directory: ./some-action
 
+      ### COOKIECUTTER SPECIFIC STEPS ###
       - name: install npm dependencies of generated project
         run: npm install -D
         working-directory: ./some-action
