@@ -3,6 +3,7 @@ Jonas Pammer <opensource@jonaspammer.at>;
 :toc:
 :toclevels: 3
 :toc-placement!:
+:cc-example-name: my-github-action
 
 ifdef::env-github[]
 // https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74#admonitions
@@ -14,21 +15,14 @@ ifdef::env-github[]
 endif::[]
 
 
-https://github.com/JonasPammer/cookiecutter-github-action-typescript/actions/workflows/ci.yml[image:https://github.com/JonasPammer/cookiecutter-github-action-typescript/actions/workflows/ci.yml/badge.svg[CI Status]]
+https://github.com/JonasPammer/{{cookiecutter-github-action-typescript}}/actions/workflows/ci.yml[image:https://github.com/JonasPammer/cookiecutter-github-action-typescript/actions/workflows/ci.yml/badge.svg[CI Status]]
 
 Awesome https://github.com/cookiecutter/cookiecutter[Cookiecutter] template for creating
-Universal NodeJS-based GitHub Actions using TypeScript.
-
-[subs="+quotes,attributes"]
-----
-user@machine:~/dev$ *cruft create https://github.com/JonasPammer/cookiecutter-github-action-typescript.git*
-----
+universal NodeJS-based GitHub Actions using TypeScript.
 
 toc::[]
 
 == Features
-
-=== At-a-Glance
 
 * Formatting with https://prettier.io/[prettier]
 * Extensive Linting with https://eslint.org/[eslint]
@@ -40,7 +34,64 @@ toc::[]
 See https://docs.github.com/en/actions/creating-actions/about-custom-actions#types-of-actions["Types of Actions" in the GitHub Documentation]
 for more information.
 
-=== General
+
+== Usage
+
+First, get https://github.com/cruft/cruft[Cruft].
+It's a tool built in Cookiecutter that will allow you to keep up-to-date with the changes made to this cookiecutter.
+
+[subs="+quotes,attributes"]
+----
+$ *python3 -m pip install cruft*
+----
+
+Now run it against this repo:
+
+[subs="+quotes,attributes"]
+----
+$ *cruft create https://github.com/JonasPammer/cookiecutter-github-action-typescript.git*
+----
+
+Answer the prompts with your own desired options.
+
+Enter the project and take a look around:
+
+[subs="+quotes,attributes"]
+----
+$ *cd ##{cc-example-name}##*
+~/##{cc-example-name}##$ *ls*
+----
+
+Create a git repo and push it there:
+
+[subs="+quotes,attributes"]
+----
+~/##{cc-example-name}##$ *git init*
+~/##{cc-example-name}##$ *git add .*
+~/##{cc-example-name}##$ *git commit -m "chore: create from cookiecutter"*
+~/##{cc-example-name}##$ *git remote add origin git@github.com:##JonasPammer/{cc-example-name}##.git*
+~/##{cc-example-name}##$ *git push -u origin master*
+----
+
+Now take a look at your repo. 
+Don't forget to carefully look at the generated README -
+It contains all relevant Development Documentation.
+
+Awesome, right?
+
+[NOTE]
+This CookieCutter does not configure your GitHub Repository.
+Please read the notes found in this README and perform the documented manual steps
+(e.g., Creating GitHub Action Secrets).
+
+
+== Generic Features
+
+I maintain several CookieCutter's.
+Many of them share a similiar set of boilerplate files.
+You will find this section to be the same in most of them.
+
+=== Documentation
 
 * Includes an Awesome README
 +
@@ -65,6 +116,10 @@ To do so, go to the _Settings_ page of your GitHub repository. Under _Pages / So
 * Includes a Beginner-Friendly Development Documentation file
 * Includes a Beginner-Friendly Contribution Documentation file, inspired by
   https://github.com/auth0/open-source-template/blob/master/GENERAL-CONTRIBUTING.md[Auth0's Open Source Template].
+
+
+=== Development
+
 * Assumes MIT License.
 * Includes numerous https://pre-commit.com/[pre-commit] hooks to automatically
   find linting issues, format your files, and find common issues of version control and source code
