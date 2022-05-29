@@ -71,7 +71,7 @@ Create a git repo and push it there:
 ~/##{cc-example-name}##$ *git push -u origin master*
 ----
 
-Now take a look at your repo. 
+Now take a look at your repo.
 Don't forget to carefully look at the generated README -
 It contains all relevant Development Documentation.
 
