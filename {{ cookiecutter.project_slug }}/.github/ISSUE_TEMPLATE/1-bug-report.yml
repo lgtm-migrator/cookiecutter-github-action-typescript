@@ -13,14 +13,19 @@ body:
     attributes:
       label: What happened?
       description: Also tell us, what did you expect to happen?
-      placeholder: A clear description of what the bug is about (I was doing ... I ran ... I expected ... I got ...).
-    validations:
-      required: true
+      value: |
+        I was doing ...
+
+        I ran ...
+
+        I expected ...
+
+        I got ...
   - type: textarea
     id: host
     attributes:
       label: Environment Information
-      placeholder: Tell us about your Operating System.
+      description: Tell us about your Operating System.
     validations:
       required: true
   - type: input
