@@ -21,6 +21,8 @@ body:
         I expected ...
 
         I got ...
+    validations:
+      required: true
   - type: textarea
     id: host
     attributes:
