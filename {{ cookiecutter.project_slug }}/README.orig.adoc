@@ -25,7 +25,11 @@ toc::[]
 
 == System Requirements
 
-* As a JavaScript based Action, this action can be run by any Operating system (Linux, macOS, Windows).
+* As a JavaScript based Action, this action can be run by any Operating system (
+image:https://img.shields.io/badge/Ubuntu-E95420?logo=ubuntu&logoColor=white[Ubuntu],
+image:https://img.shields.io/badge/mac%20OS-000000?logo=macos&logoColor=F0F0F0[Mac OS] &
+image:https://img.shields.io/badge/Windows%20Server-0078D6?logo=windows&logoColor=white[Windows Server]
+).
 See https://docs.github.com/en/actions/creating-actions/about-custom-actions#types-of-actions["Types of Actions" in the GitHub Documentation]
 for more information.
 
