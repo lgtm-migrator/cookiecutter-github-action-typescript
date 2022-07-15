@@ -1,3 +1,5 @@
+# original ignore added by 'node' template below
+!dist
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,linux,visualstudiocode,jetbrains+all,svn,python,virtualenv,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,linux,visualstudiocode,jetbrains+all,svn,python,virtualenv,node
