@@ -16,6 +16,7 @@ permissions:
       - "LICENSE"
       - "src/**"
       - "tests/**"
+      - "dist/*"
       - "package.json"
       - "package-lock.json"
   schedule:
