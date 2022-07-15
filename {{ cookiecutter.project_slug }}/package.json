@@ -5,6 +5,7 @@
   "main": "lib/main.js",
   "scripts": {
     "lint": "pre-commit run eslint --all-files",
+    "format": "pre-commit run prettier --all-files",
     "build": "tsc",
     "package": "ncc build --source-map --license LICENSE.txt",
     "test": "jest",
