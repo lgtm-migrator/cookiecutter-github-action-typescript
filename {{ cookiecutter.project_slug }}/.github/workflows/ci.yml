@@ -1,6 +1,7 @@
 ---
 name: CI
-permissions: read-all
+permissions:
+  contents: write
 "on":
   workflow_dispatch:
   pull_request:
