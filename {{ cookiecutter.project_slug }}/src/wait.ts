@@ -1,4 +1,3 @@
-
 // FIXME: this is just an examplatory function from the cookiecutter
 export async function wait(milliseconds: number): Promise<string> {
   return new Promise((resolve) => {
