@@ -1,5 +1,0 @@
-{
-  "devDependencies": {
-    "@vercel/ncc": "^0.34.0"
-  }
-}
