@@ -50,7 +50,7 @@ jobs:
       - name: install npm dependencies
         run: npm install -D
 
-      - name: Install test dependencies.
+      - name: install dev dependencies
         run: pip3 install -r requirements-dev.txt
 
       # same order as in 'npm run all':
