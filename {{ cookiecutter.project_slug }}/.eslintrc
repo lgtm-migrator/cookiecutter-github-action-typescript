@@ -22,11 +22,14 @@
     "i18n-text/no-en": "off",
     "import/no-namespace": "off",
 
-    // Enabling typescript-eslint "extension rules" not enabled by plugin preset (and disabling their base ones):
+    // Enabling typescript-eslint "extension rules" not enabled by plugin preset
+    // (and disabling their base ones):
     "@typescript-eslint/no-invalid-this": ["error"],
     "@typescript-eslint/no-use-before-define": ["error"],
 
-    // Explicitly disabling eslint's base rules (as they are replaced by typescript-eslint's "extension rules") to avoid reporting of incorrect errors:
+    // Explicitly disabling eslint's base rules
+    // (as they are replaced by typescript-eslint's "extension rules")
+    // to avoid reporting of incorrect errors:
     "no-invalid-this": "off",
     "no-use-before-define": "off",
     "brace-style": "off",
