@@ -34,7 +34,36 @@ See https://docs.github.com/en/actions/creating-actions/about-custom-actions#typ
 for more information.
 
 == Usage
-TODO
+This action needs the GITHUB_TOKEN secret
+as it interacts with the GitHub API to **FIXME describe why**.
+
+The action can be used as follows
+
+.pass:[.]github/ci/{{ cookiecutter.project_slug }}.yml
+[source,yaml]
+----
+---
+name: {{ cookiecutter.project_name }}
+permissions:
+  # FIXME: add project-dependant relevant permissions https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs
+"on":
+  push:
+    branches:
+      - master
+    paths:
+      - ".github/workflows/{{ cookiecutter.project_slug }}.yml"
+      # FIXME: add project-dependant relevant paths
+
+jobs:
+  labels:
+    name: Invoke {{ cookiecutter.project_slug }} action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: {{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}@master # FIXME: change to release version
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+----
 
 
 == Scenarios
