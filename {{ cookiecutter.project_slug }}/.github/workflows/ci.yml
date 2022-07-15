@@ -30,6 +30,20 @@ jobs:
       - name: install npm dependencies
         run: npm install -D
 
+      - name: set up python 3
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+
+      - name: setup/activate pre-commit cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pre-commit
+          key: {% raw %}${{ hashFiles('**/.pre-commit-config.yaml') }}{% endraw %}
+
+      - name: Install test dependencies.
+        run: pip3 install -r requirements-dev.txt
+
       # same order as in 'npm run all':
       - name: Compile Typescript.
         run: npm run build
