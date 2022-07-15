@@ -1,9 +1,11 @@
 import * as core from "@actions/core";
 import { wait } from "./wait";
 
-// Most toolkit (@actions/...) and CI/CD operations involve async operations so the action is run in an async function.
+// Most toolkit (@actions/...) and CI/CD operations involve async operations,
+// so it's good to run our action in an async function too.
 async function run(): Promise<void> {
   try {
+    // FIXME: this is just an example code from the cookiecutter
     const ms: string = core.getInput("milliseconds");
     core.debug(`Waiting ${ms} milliseconds ...`); // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
 
