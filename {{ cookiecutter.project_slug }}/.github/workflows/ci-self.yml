@@ -4,6 +4,8 @@ permissions:
 "on":
   workflow_dispatch:
   push:
+    branches:
+      - "*"
     paths:
       - ".github/workflows/ci-self.yml"
       - "dist/*"
@@ -14,7 +16,6 @@ permissions:
 jobs:
   test-self-action:
     name: Make sure the action works on a clean machine without building
-    needs: package
     runs-on: ubuntu-latest
 
     steps:
