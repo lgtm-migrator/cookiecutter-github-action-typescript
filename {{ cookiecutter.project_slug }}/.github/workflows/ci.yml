@@ -16,7 +16,6 @@ permissions:
       - "LICENSE"
       - "src/**"
       - "tests/**"
-      - "dist/*"
       - "package.json"
       - "package-lock.json"
   schedule:
@@ -76,14 +75,3 @@ jobs:
         with:
           commit_message: "chore: generate packaged distribution file for {% raw %}${{ github.sha }}{% endraw %} \n {% raw %}${{ github.event.head_commit.message }}{% endraw %}"
           file_pattern: "dist/*"
-
-  test-self-action:
-    name: Make sure the action works on a clean machine without building
-    needs: package
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-      - uses: ./
-        with:
-          milliseconds: 1000
