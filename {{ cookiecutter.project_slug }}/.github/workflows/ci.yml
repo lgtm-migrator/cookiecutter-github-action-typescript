@@ -15,6 +15,8 @@ permissions: read-all
       - "LICENSE"
       - "src/**"
       - "tests/**"
+      - "package.json"
+      - "package-lock.json"
   schedule:
     # At 05:00 on Sunday.
     - cron: "0 5 * * 0"
@@ -44,7 +46,6 @@ jobs:
         with:
           path: ~/.cache/pre-commit
           key: {% raw %}${{ hashFiles('**/.pre-commit-config.yaml') }}{% endraw %}
-
 
       - name: install npm dependencies
         run: npm install -D
