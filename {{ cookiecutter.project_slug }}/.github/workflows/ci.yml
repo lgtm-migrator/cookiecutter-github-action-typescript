@@ -36,11 +36,11 @@ jobs:
         with:
           python-version: "3.8"
 
-      - name: setup/activate npm download cache
-        uses: actions/cache@v3
+      - name: setup node 16 and activate npm download cache
+        uses: actions/setup-node@v3
         with:
-          path: ~/.npm
-          key: {% raw %}${{ hashFiles('package-lock.json') }}{% endraw %}
+          node-version: 16
+          cache: "npm" # one of "npm", "yarn" or "pnpm"
 
       - name: setup/activate pre-commit cache
         uses: actions/cache@v3
