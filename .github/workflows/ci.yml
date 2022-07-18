@@ -73,11 +73,11 @@ jobs:
 
       ### COOKIECUTTER SPECIFIC STEPS ###
       - name: install npm dependencies of generated project
-        run: npm install -D
+        run: yarn install -D
         working-directory: ./some-action
 
       - name: Run all npm scripts of generated project
         run: |
           source project-venv/bin/activate
-          npm run all
+          yarn run all
         working-directory: ./some-action

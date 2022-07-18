@@ -40,7 +40,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: "npm" # one of "npm", "yarn" or "pnpm"
+          cache: "yarn" # one of "npm", "yarn" or "pnpm"
 
       - name: setup/activate pre-commit cache
         uses: actions/cache@v3
@@ -48,27 +48,28 @@ jobs:
           path: ~/.cache/pre-commit
           key: {% raw %}${{ hashFiles('**/.pre-commit-config.yaml') }}{% endraw %}
 
-      - name: install npm dependencies
-        run: npm install -D
+      # https://stackoverflow.com/a/69944063/13953427
+      - name: install npm dependencies (including dev)
+        run: yarn install -D --immutable --immutable-cache --check-cache
 
       - name: install dev dependencies
         run: pip3 install -r requirements-dev.txt
 
-      # same order as in 'npm run all':
+      # same order as in 'yarn run all':
       - name: Compile Typescript.
-        run: npm run build
+        run: yarn run build
 
       - name: Format Code.
-        run: npm run format
+        run: yarn run format
 
       - name: Lint Code.
-        run: npm run lint
+        run: yarn run lint
 
       - name: Compile source into single file.
-        run: npm run package
+        run: yarn run package
 
       - name: Test.
-        run: npm run test
+        run: yarn run test
 
       - name: Commit generated dist.
         uses: stefanzweifel/git-auto-commit-action@v4
