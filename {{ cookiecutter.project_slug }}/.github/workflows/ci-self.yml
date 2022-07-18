@@ -16,7 +16,10 @@ permissions:
 jobs:
   test-self-action:
     name: Make sure the action works on a clean machine without building
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
 
     steps:
       - uses: actions/checkout@v3
