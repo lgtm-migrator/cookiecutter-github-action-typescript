@@ -78,10 +78,14 @@ It contains all relevant Development Documentation.
 Awesome, right?
 
 [NOTE]
+This CookieCutter contains examplatory code snippets.
+Things that definetily need to be replaced or can be removed by you
+are commented with `**FIXME**`.
+
+[NOTE]
 This CookieCutter does not configure your GitHub Repository.
 Please read the notes found in this README and perform the documented manual steps
 (e.g., Creating GitHub Action Secrets).
-
 
 == Generic Features
 
