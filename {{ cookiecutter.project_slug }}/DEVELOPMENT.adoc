@@ -45,14 +45,12 @@ This bundled file needs to be *generated* by issuing `yarn run build` followed b
 Packaging is performed on each contribution by a GitHub workflow,
 which automatically commits the generated files back to the repository.
 
-
 [[versioning]]
 === 🔢 Versioning
 
 Versions are defined using https://git-scm.com/book/en/v2/Git-Basics-Tagging[Tags].
 
 Versions must start with `v`.
-
 
 [[cookiecutter]]
 === 🍪 CookieCutter
