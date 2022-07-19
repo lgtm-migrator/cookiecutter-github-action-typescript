@@ -24,7 +24,7 @@ permissions:
 
 jobs:
   package:
-    name: Package Distribution File
+    name: Run Everything and Package Distribution File
     runs-on: ubuntu-latest
 
     steps:
