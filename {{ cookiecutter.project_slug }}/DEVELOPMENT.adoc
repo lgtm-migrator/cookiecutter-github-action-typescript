@@ -36,7 +36,7 @@ To run the tests, simply run `yarn run build` followed by `yarn run test` on the
 
 
 [[packaging]]
-=== Packaging
+=== 📦 Packaging
 As defined in `action.yml`, the primary entry point for this action is `dist/index.js`.
 This bundled file needs to be *generated* by issuing `yarn run build` followed by `yarn run package`.
 
