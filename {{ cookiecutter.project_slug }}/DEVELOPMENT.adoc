@@ -52,6 +52,13 @@ Versions are defined using https://git-scm.com/book/en/v2/Git-Basics-Tagging[Tag
 
 Versions must start with `v`.
 
+Note that major version tags (e.g. `v1`, `v2`)
+are basically just pointers to the latest version
+within said major version constraint (e.g. `v1.2.3`).
+This is accomplished through the use of a GitHub Workflow
+that issues https://github.com/nowactions/update-majorver[nowactions/update-majorver]
+on each push of a tag starting with `v`.
+
 [[cookiecutter]]
 === 🍪 CookieCutter
 
