@@ -37,12 +37,21 @@ To run the tests, simply run `yarn run build` followed by `yarn run test` on the
 
 [[packaging]]
 === 📦 Packaging
+
 As defined in `action.yml`, the primary entry point for this action is `dist/index.js`.
 This bundled file needs to be *generated* by issuing `yarn run build` followed by `yarn run package`.
 
 [TIP]
 Packaging is performed on each contribution by a GitHub workflow,
 which automatically commits the generated files back to the repository.
+
+
+[[versioning]]
+=== 🔢 Versioning
+
+Versions are defined using https://git-scm.com/book/en/v2/Git-Basics-Tagging[Tags].
+
+Versions must start with `v`.
 
 
 [[cookiecutter]]
