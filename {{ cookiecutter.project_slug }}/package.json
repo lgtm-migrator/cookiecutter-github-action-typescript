@@ -28,11 +28,13 @@
   },
   "homepage": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}#readme",
   "dependencies": {
-    "@actions/core": "^1.8.2"
+    "@actions/core": "^1.9.0",
+    "@actions/github": "^5.0.3",
+    "js-yaml": "^4.1.0"
   },
   "devDependencies": {
-    "@types/jest": "^27.5.1",
     "@types/node": "^17.0.34",
+    "@types/jest": "^27.5.1",
     "@vercel/ncc": "^0.34.0",
     "jest": "^28.1.0",
     "ts-jest": "^28.0.2",
