@@ -27,6 +27,7 @@ universal NodeJS-based GitHub Actions using TypeScript.
 * Git hooks that run all the above with pre-commit
 * Static typing with https://www.typescriptlang.org/[typescript]
 * Testing with https://jestjs.io/[jest]
+* Code Coverage Reporting with https://about.codecov.io/[Codecov]
 * Continuous Integration with https://github.com/features/actions[GitHub Actions]
 * As a JavaScript based Action, this action can be run by any Operating system (Linux, macOS, Windows).
 See https://docs.github.com/en/actions/creating-actions/about-custom-actions#types-of-actions["Types of Actions" in the GitHub Documentation]

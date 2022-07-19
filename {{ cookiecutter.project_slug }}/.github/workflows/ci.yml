@@ -71,6 +71,9 @@ jobs:
       - name: Test.
         run: yarn run test
 
+      - name: Upload coverage to Codecov and create Pull Request comment
+        uses: codecov/codecov-action@v3
+
       - name: Commit generated dist.
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
