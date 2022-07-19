@@ -1,5 +1,5 @@
 import * as core from "@actions/core";
-import { wait } from "./wait";
+import { wait } from "./lib";
 
 // Most toolkit (@actions/...) and CI/CD operations involve async operations,
 // so it's good to run our action in an async function too.
