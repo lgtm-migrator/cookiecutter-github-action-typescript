@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JonasPammer/cookiecutter-github-action-typescript.git"
+    "url": "git+https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.git"
   },
   "keywords": [
     "GitHub",
@@ -24,9 +24,9 @@
   "author": "{{ cookiecutter.full_name }}",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JonasPammer/cookiecutter-github-action-typescript/issues"
+    "url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues"
   },
-  "homepage": "https://github.com/JonasPammer/cookiecutter-github-action-typescript#readme",
+  "homepage": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}#readme",
   "dependencies": {
     "@actions/core": "^1.8.2"
   },
