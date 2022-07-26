@@ -27,7 +27,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/Yelp/detect-secrets
-    rev: v1.2.0
+    rev: v1.3.0
     hooks:
       - id: detect-secrets
         exclude: |
@@ -48,7 +48,7 @@ repos:
 
   ### JAVA(SCRIPT) ###
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v8.19.0
+    rev: v8.20.0
     hooks:
       - id: eslint
         additional_dependencies:
