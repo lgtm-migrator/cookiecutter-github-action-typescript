@@ -1,7 +1,7 @@
 = CookieCutter GitHub Action TypeScript
 Jonas Pammer <opensource@jonaspammer.at>;
 :toc:
-:toclevels: 3
+:toclevels: 2
 :toc-placement!:
 :cc-example-name: my-github-action
 
@@ -20,15 +20,27 @@ https://github.com/JonasPammer/{{cookiecutter-github-action-typescript}}/actions
 Awesome https://github.com/cookiecutter/cookiecutter[Cookiecutter] template for creating
 universal NodeJS-based GitHub Actions using TypeScript.
 
-== Features
+toc::[]
 
+
+== Primary Features
+
+=== At-a-glance
+
+// pre-commit
 * Formatting with https://prettier.io/[prettier]
 * Extensive Linting with https://eslint.org/[eslint]
 * Git hooks that run all the above with pre-commit
-* Static typing with https://www.typescriptlang.org/[typescript]
-* Testing with https://jestjs.io/[jest]
-* Code Coverage Reporting with https://about.codecov.io/[Codecov]
+
+---
+
 * Continuous Integration with https://github.com/features/actions[GitHub Actions]
+* Testing with https://jestjs.io/[jest]
+* Code Coverage Reporting with https://about.codecov.io/[Codecov] through CI
+
+---
+
+* Static typing with https://www.typescriptlang.org/[typescript]
 * As a JavaScript based Action, this action can be run by any Operating system (Linux, macOS, Windows).
 See https://docs.github.com/en/actions/creating-actions/about-custom-actions#types-of-actions["Types of Actions" in the GitHub Documentation]
 for more information.
@@ -53,7 +65,8 @@ $ *cruft create https://github.com/JonasPammer/cookiecutter-github-action-typesc
 
 Answer the prompts with your own desired options.
 
-Enter the project and take a look around:
+Enter the project and take a look around
+(replace "{cc-example-name}" with your project slug):
 
 [subs="+quotes,attributes"]
 ----
@@ -61,14 +74,16 @@ $ *cd ##{cc-example-name}##*
 ~/##{cc-example-name}##$ *ls*
 ----
 
-Create a git repo and push it there:
+Create a git repo and push it there
+(replace "YourGitHubName" with your github profile name
+ and "{cc-example-name}" with your project slug):
 
 [subs="+quotes,attributes"]
 ----
 ~/##{cc-example-name}##$ *git init*
 ~/##{cc-example-name}##$ *git add .*
 ~/##{cc-example-name}##$ *git commit -m "chore: create from cookiecutter"*
-~/##{cc-example-name}##$ *git remote add origin git@github.com:##JonasPammer/{cc-example-name}##.git*
+~/##{cc-example-name}##$ *git remote add origin git@github.com:##YourGitHubName/{cc-example-name}##.git*
 ~/##{cc-example-name}##$ *git push -u origin master*
 ----
 
@@ -88,7 +103,7 @@ This CookieCutter does not configure your GitHub Repository.
 Please read the notes found in this README and perform the documented manual steps
 (e.g., Creating GitHub Action Secrets).
 
-== Generic Features
+== Generic Features of this 🍪
 
 I maintain several CookieCutter's.
 Many of them share a similiar set of boilerplate files.
@@ -124,6 +139,7 @@ To do so, go to the _Settings_ page of your GitHub repository. Under _Pages / So
 === Development
 
 * Assumes MIT License.
+* Changelog is assumed to be managed through the use of GitHub Releases.
 * Includes numerous https://pre-commit.com/[pre-commit] hooks to automatically
   find linting issues, format your files, and find common issues of version control and source code
 * Includes a very much standard
@@ -160,4 +176,4 @@ as it is assumed that the project is included in your `pre-commit.ci` account pr
   https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/about-dependabot-version-updates[Dependabot]
   configuration file to check for updates of used GitHub Actions themselves on a monthly basis
 * Includes a GitHub Workflow to *declaratively manage labels*
-** The predefined `labels.json` is inspired by the kubernetes project
+** The predefined labels definition is inspired by the kubernetes project
