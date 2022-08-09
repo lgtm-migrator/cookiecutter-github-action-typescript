@@ -33,7 +33,7 @@
   "github-actions": {
     "fileMatch": ["(.*)(workflow-templates|\.github\/workflows)\/[^/]+\.ya?ml$"]
   },
-  "github-actions": {
+  "npm": {
     "fileMatch": ["(.*)(^|/)package\.json$"]
   },
 
