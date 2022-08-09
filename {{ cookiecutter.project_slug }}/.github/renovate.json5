@@ -34,7 +34,7 @@
   packageRules: [
     {
       matchPackagePatterns: ["npm"],
-      rangeStrategy: "bump"
+      rangeStrategy: "bump",
     },
     {
       matchPackagePatterns: ["eslint"],
