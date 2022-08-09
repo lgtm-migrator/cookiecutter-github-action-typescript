@@ -29,21 +29,21 @@ jobs:
 
     steps:
       - name: check out the codebase
-        uses: actions/checkout@v3
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
 
       - name: set up python 3
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@b55428b1882923874294fa556849718a1d7f2ca5 # tag=v4
         with:
           python-version: "3.8"
 
       - name: setup node 16 and activate npm download cache
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93 # tag=v3
         with:
           node-version: 16
           cache: "npm" # one of "npm", "yarn" or "pnpm"
 
       - name: setup/activate pre-commit cache
-        uses: actions/cache@v3
+        uses: actions/cache@f4278025ab0f432ce369118909e46deec636f50c # tag=v3
         with:
           path: ~/.cache/pre-commit
           key: {% raw %}${{ hashFiles('**/.pre-commit-config.yaml') }}{% endraw %}
@@ -72,10 +72,10 @@ jobs:
         run: npm run test
 
       - name: Upload coverage to Codecov and create Pull Request comment
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@81cd2dc8148241f03f5839d295e000b8f761e378 # tag=v3
 
       - name: Commit generated dist.
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@49620cd3ed21ee620a48530e81dba0d139c9cb80 # tag=v4
         with:
           commit_message: "chore: generate packaged distribution file for {% raw %}${{ github.sha }}{% endraw %} \n {% raw %}${{ github.event.head_commit.message }}{% endraw %}"
           file_pattern: "dist/*"
