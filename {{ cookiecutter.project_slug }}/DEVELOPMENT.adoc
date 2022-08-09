@@ -11,7 +11,7 @@ The Dependencies of this Project are defined in `package.json`.
 Install via:
 
 ----
-$ yarn install -D
+$ npm install -D
 ----
 
 The Dependencies of Additional Development Tools are defined in a
@@ -32,14 +32,14 @@ $ python3 -m pip install -r requirements-dev.txt
 === 🧪 Testing
 Automatic Tests are run on each Contribution using GitHub Workflows.
 
-To run the tests, simply run `yarn run build` followed by `yarn run test` on the command line.
+To run the tests, simply run `npm run build` followed by `npm run test` on the command line.
 
 
 [[packaging]]
 === 📦 Packaging
 
 As defined in `action.yml`, the primary entry point for this action is `dist/index.js`.
-This bundled file needs to be *generated* by issuing `yarn run build` followed by `yarn run package`.
+This bundled file needs to be *generated* by issuing `npm run build` followed by `npm run package`.
 
 [TIP]
 Packaging is performed on each contribution by a GitHub workflow,

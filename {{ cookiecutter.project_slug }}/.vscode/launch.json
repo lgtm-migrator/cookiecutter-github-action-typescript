@@ -1,7 +1,7 @@
 {
   "configurations": [
     {
-      "command": "yarn install -D; yarn run build; yarn run package; yarn run test",
+      "command": "npm install -D; npm run build; npm run package; npm run test",
       "name": "Build, Package and Test",
       "request": "launch",
       "type": "node-terminal"

@@ -40,7 +40,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: "yarn" # one of "npm", "yarn" or "pnpm"
+          cache: "npm" # one of "npm", "yarn" or "pnpm"
 
       - name: setup/activate pre-commit cache
         uses: actions/cache@v3
@@ -50,26 +50,26 @@ jobs:
 
       # https://stackoverflow.com/a/69944063/13953427
       - name: install npm dependencies (including dev)
-        run: yarn install -D --immutable --immutable-cache --check-cache
+        run: npm ci -D
 
       - name: install dev dependencies
         run: pip3 install -r requirements-dev.txt
 
-      # same order as in 'yarn run all':
+      # same order as in 'npm run all':
       - name: Compile Typescript.
-        run: yarn run build
+        run: npm run build
 
       - name: Format Code.
-        run: yarn run format
+        run: npm run format
 
       - name: Lint Code.
-        run: yarn run lint
+        run: npm run lint
 
       - name: Compile source into single file.
-        run: yarn run package
+        run: npm run package
 
       - name: Test.
-        run: yarn run test
+        run: npm run test
 
       - name: Upload coverage to Codecov and create Pull Request comment
         uses: codecov/codecov-action@v3
