@@ -33,6 +33,10 @@
   labels: ["kind/dependencies"],
   packageRules: [
     {
+      matchPackagePatterns: ["npm"],
+      rangeStrategy: "bump"
+    },
+    {
       matchPackagePatterns: ["eslint"],
       labels: ["kind/dependencies", "priority/low"],
     },

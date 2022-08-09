@@ -34,11 +34,15 @@
     "fileMatch": ["(.*)(workflow-templates|\.github\/workflows)\/[^/]+\.ya?ml$"]
   },
   "npm": {
-    "fileMatch": ["(.*)(^|/)package\.json$"]
+    fileMatch: ["(.*)(^|/)package\.json$"]
   },
 
   labels: ["kind/dependencies"],
   packageRules: [
+    {
+      matchPackagePatterns: ["npm"],
+      rangeStrategy: "bump"
+    },
     {
       matchPackagePatterns: ["eslint"],
       labels: ["kind/dependencies", "priority/low"],
