@@ -22,7 +22,7 @@
     "TypeScript"
   ],
   "author": "{{ cookiecutter.full_name }}",
-  "license": "MIT",
+  "license": "{{ cookiecutter.open_source_license[1] }}",
   "bugs": {
     "url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues"
   },
