@@ -28,19 +28,19 @@ jobs:
           python-version: "3.7"
 
       - name: setup/activate pre-commit cache
-        uses: actions/cache@f4278025ab0f432ce369118909e46deec636f50c # tag=v3
+        uses: actions/cache@a7c34adf76222e77931dedbf4a45b2e4648ced19 # tag=v3
         with:
           path: ~/.cache/pre-commit
           key: ${{ hashFiles('**/.pre-commit-config.yaml') }}
 
       - name: setup/activate cookiecutter-venv cache
-        uses: actions/cache@f4278025ab0f432ce369118909e46deec636f50c # tag=v3
+        uses: actions/cache@a7c34adf76222e77931dedbf4a45b2e4648ced19 # tag=v3
         with:
           path: cookiecutter-venv
           key: ${{ hashFiles('requirements-dev.txt') }}
 
       - name: setup/activate project-venv cache
-        uses: actions/cache@f4278025ab0f432ce369118909e46deec636f50c # tag=v3
+        uses: actions/cache@a7c34adf76222e77931dedbf4a45b2e4648ced19 # tag=v3
         with:
           path: project-venv
           key: ${{ hashFiles('*/requirements-dev.txt') }}
