@@ -11,6 +11,9 @@ on:
     # At 01:30 AM, only on Sunday
     - cron: "30 1 * * 0"
 
+permissions:
+  contents: read
+
 jobs:
   CodeQL-Analysis:
     runs-on: ubuntu-latest

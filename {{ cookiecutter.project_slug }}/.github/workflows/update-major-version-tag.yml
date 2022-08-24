@@ -5,6 +5,9 @@ name: Update Major Version Tag
     tags:
       - "v*"
 
+permissions:
+  contents: write
+
 jobs:
   update-majorver:
     name: Update Major Version Tag

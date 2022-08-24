@@ -1,6 +1,5 @@
 name: Test Self Action
-permissions:
-  contents: read
+
 "on":
   workflow_dispatch:
   push:
@@ -12,6 +11,9 @@ permissions:
   schedule:
     # At 06:00 on Sunday.
     - cron: "0 6 * * 0"
+
+permissions:
+  contents: read
 
 jobs:
   test-self-action:
